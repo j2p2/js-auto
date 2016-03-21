@@ -3,20 +3,24 @@
   "version": "1.0.0",
   "description": "starter framework for js test automation",
   "dependencies": {
-	"yadda": ">= 0.17.4",
-	"mocha": ">= 2.4.5",
-	"assert": ">= 1.3.0",
-	"karma": ">= 0.10",
+    "yadda": ">= 0.17.4",
+    "mocha": ">= 2.4.5",
+    "assert": ">= 1.3.0",
+    "karma": ">= 0.10",
     "karma-firefox-launcher": ">= 0.1"
   },
   "directories": {
     "test": "test"
   },
-  "scripts": { 
-	"test" : "mocha --reporter spec search-test.js"  
+  "scripts": {
+    "test": "mocha --reporter spec search-test.js",
+    "start": "karma init"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/j2p2/js-auto.git"
+  },
+  "devDependencies": {
+    "karma-mocha": "^0.2.2"
   }
 }
