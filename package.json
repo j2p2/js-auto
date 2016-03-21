@@ -14,7 +14,7 @@
   },
   "scripts": {
     "test": "mocha --reporter spec search-test.js",
-    "start": "karma init"
+    "start": "karma start"
   },
   "repository": {
     "type": "git",
