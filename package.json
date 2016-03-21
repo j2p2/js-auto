@@ -5,22 +5,16 @@
   "dependencies": {
     "yadda": ">= 0.17.4",
     "mocha": ">= 2.4.5",
-    "assert": ">= 1.3.0",
-    "karma": ">= 0.10",
-    "karma-firefox-launcher": ">= 0.1"
+    "assert": ">= 1.3.0"
   },
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "mocha --reporter spec search-test.js",
-    "start": "karma start"
+    "test": "mocha --reporter spec search-test.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/j2p2/js-auto.git"
-  },
-  "devDependencies": {
-    "karma-mocha": "^0.2.2"
   }
 }
