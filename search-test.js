@@ -43,8 +43,7 @@ new Yadda.FeatureFileSearch('./test/features').each(function (file) {
         after(function (done) {
             executeInFlow(function () {
                 if (feature.annotations.webdriver) {
-                    driver = new webdriver.Builder().forBrowser('firefox').build();
-                    driver.manage().timeouts().implicitlyWait(10000);
+                    driver.quit();
                 }
             }, done);
         });
