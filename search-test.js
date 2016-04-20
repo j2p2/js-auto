@@ -5,7 +5,16 @@
 var Yadda = require('yadda');
 Yadda.plugins.mocha.StepLevelPlugin.init();
 
-var library = require('./test/stepdefs/search-stepdef');
+// stepdef file loader
+var library = [];
+var path = require('path');
+var fs = require('fs');
+var stepfolder = path.join('test', 'stepdefs');
+fs.readdirSync(stepfolder).forEach(function(file) {
+        // trying to work on all platforms, there is probably a better way
+        library.push(require('.' + path.sep + stepfolder + path.sep + file));    
+    });
+
 var webdriver = require('selenium-webdriver');
 
 var fs = require('fs');
@@ -18,8 +27,6 @@ new Yadda.FeatureFileSearch('./test/features').each(function(file) {
             executeInFlow(function() {
                 driver = new webdriver.Builder().forBrowser('firefox').build();
                 driver.manage().timeouts().implicitlyWait(10000);
-				//By = webdriver.By;
-				//until = webdriver.until;
             }, done);
         });
 
