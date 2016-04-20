@@ -1,4 +1,3 @@
-require('./new-stepdef')
 var English = require('yadda').localisation.English;
 var assert = require('assert');
 var Wall = require('../../lib/search'); // The library that you wish to test
