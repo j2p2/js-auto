@@ -1,6 +1,6 @@
 var assert = require('assert');
 var English = require('yadda').localisation.English;
-var Wall = require('../../lib/search'); // The library that you wish to test
+var Wall = require('../../lib/sample'); // The library that you wish to test
 
 module.exports = (function () {
   return English.library()
