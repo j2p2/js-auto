@@ -20,8 +20,6 @@ var driver;
 
 new Yadda.FeatureFileSearch('./test/features').each(function (file) {
     featureFile(file, function (feature) {
-        console.log(file);
-        console.log(feature.annotations);
         before(function (done) {
             executeInFlow(function () {
                 if (feature.annotations.webdriver) {
